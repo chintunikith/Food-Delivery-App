@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- the above line code is to make the wesite responsive-1400px is the value fetches where the website starts ruining(bigadna in hindi) 
+    this downline is the syntax to be learnt
+    media="screen and (max-width: 1400px)"-->
+    <!-- Adding font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200&display=swap"
+        rel="stylesheet">
+    <style>
+        /* CSS reset */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* to activate the navbar working */
+        }
+
+        /* CSS Variables */
+        :root {
+            --navbar-height: 59px;
+            /* we didnot use this variable in this total code */
+        }
+
+        /* Navigation bar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            /* no need of above linecode bcoz we dont keep navbar at centre */
+
+
+        }
+
+        /* from now onwards use before pseudoselectors concept to insert the background colour or background image in any portion of the website like navbar (or) section etc */
+        #navbar::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            /* the above 4 linecodes are standard   */
+
+            background-color: black;
+            z-index: -1;
+            /* to make the content appear on the black colour */
+            opacity: 0.4;
+            /* to alter the color */
+            top: 0px;
+            left: 0px;
+        }
+
+
+        /* Styling Navigation bar-Logo */
+        #logo {
+            margin: 15px 12px;
+        }
+
+        /* Styling the image in logo of navigation bar */
+        #logo img {
+            height: 61px;
+            margin: -7px 24px;
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar ul li {
+
+            list-style: none;
+            /* the above line code is to remove the bullets */
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: white;
+            /* color tag is used for the color of text */
+            padding: 10px 34px;
+            border-radius: 20px;
+            text-decoration: none;
+            /* the above linecode is to remove the underline */
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            /* text color changes to black */
+            background-color: white;
+        }
+
+        /* Section of class home */
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+
+
+
+        }
+
+        #home::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            /* the above 4 linecodes are standard   */
+            background: url('img/pexels-pixabay-326279.jpg') no-repeat center center/cover;
+            /* this is how we insert the background image in any part of the webpage- and the keywords after the link are to be defaultly written in the code for correct orientation of the background image*/
+            z-index: -1;
+            /* to make the content appear on the black colour */
+            opacity: 0.89;
+            /* to alter the color */
+
+        }
+
+        .h-primary {
+            font-size: 2.6rem;
+            padding: 17px;
+            color: white;
+            text-align: center;
+            /* makes the text centre like option available on insta */
+        }
+
+        #home p {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* Styling button */
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: khaki;
+            color: black;
+            margin: 17px 2px;
+            font-size: 1.2rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            /* to change the cursor style when taken on to the button */
+        }
+
+        .btn:hover {
+            background-color: gray;
+
+        }
+
+        /* Styling Servies container */
+        #services {
+            margin: 34px;
+            display: flex;
+            /* so the three boxes inside this div will become flex items */
+
+
+        }
+
+        #box1 {
+            border: 2px solid brown;
+            padding: 20px 20px;
+
+
+
+        }
+
+        #box2 {
+            border: 2px solid brown;
+            padding: 20px 20px;
+
+        }
+
+        #box3 {
+            border: 2px solid brown;
+            padding: 20px 20px;
+
+
+        }
+
+        /* Setting image dimensions which is in box1 */
+        #box1 img {
+            height: 160px;
+            /* To make the image at the center of the box we used margin:auto */
+            margin: auto;
+            display: block;
+            /* to make the command 'margin:auto' display should be block */
+
+        }
+
+        #box2 img {
+            height: 160px;
+            /* To make the image at the center of the box we used margin:auto */
+            margin: auto;
+            display: block;
+            /* to make the command 'margin:auto' display should be block */
+
+        }
+
+        #box3 img {
+            height: 160px;
+            /* To make the image at the center of the box we used margin:auto */
+            margin: auto;
+            display: block;
+            /* to make the command 'margin:auto' display should be block */
+
+        }
+
+        .h-secondary {
+            font-size: 1.8rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .services-container {
+
+            margin: 155px 0px;
+
+
+
+        }
+
+        .nikith {
+            color: black;
+            text-align: center;
+            /* the above line code if making the text at centre */
+            font-size: 40px;
+            font-family: 'Josefin Sans', sans-serif;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .box {
+            margin: -28px 2px;
+            border-radius: 25px;
+            background-color: #f1ebeb8a;
+
+        }
+
+        /* CSS Styling for clients box section */
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clients img {
+            /* setting the height of the logos */
+            height: 100px;
+        }
+
+        .clientitem {
+            margin: 13px 57px;
+            padding: 5px 26px;
+        }
+
+        .ourclients {
+            text-align: center;
+            font-size: 30px;
+            color: yellow;
+        }
+
+        #client-section {
+            margin: -68px 0px;
+            background: url('img/t8w4sf.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #contact {
+            margin: 68px 0px;
+            background: url('img/contact2.jfif') no-repeat center center/cover;
+
+
+        }
+
+        /* #contact::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('img/contact2.jfif') no-repeat center center/cover;
+        } */
+        #hello {
+            font-size: 30px;
+            color: black;
+            text-align: center;
+
+        }
+
+        footer {
+            background: black;
+        
+            color: white;
+            padding: 9px 20px;
+            text-align: center;
+        }
+
+        #contactbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        #contactbox input {
+            width: 100%;
+            /* the above line code is to enlarge the width of boxex in form to 100% */
+            border-radius: 5px;
+            padding: 10px 10px;
+
+
+        }
+
+        #contactbox textarea {
+            width: 100%;
+            /* uncomment the above line code to notice the difference deinitely */
+            border-radius: 5px;
+        }
+
+        #contactbox form {
+            width: 40%;
+        }
+
+        #contactbox {
+            font-size: 1.3rem;
+        }
+
+        #navbar {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <!-- to create a nav bar use 'nav' tag -->
+        <div id="logo">
+            <img src="img\logo.png" alt="Craving.com">
+            <!-- 'img' tag is used to insert local image.. here under src we should write image file name and near alt we should write the text if image is not loaded -->
+        </div>
+
+        <ul>
+            <li class="item">
+                <a href="#home">Home</a>
+                <!-- #home in hrref means when you press home button in navbar the website goes to section of id home -->
+            </li>
+            <li class="item">
+                <a href="#kiran">Services</a>
+                <!-- #kiran in hrref means when you press services button in navbar the website goes to section of id kiran -->
+            </li>
+            <li class="item">
+                <a href="#client-section">About Us</a>
+            </li>
+            <li class="item">
+                <a href="#contact">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- the content below navbar is coded in the section tag -->
+    <section id="home">
+        <h1 class="h-primary">
+            Welcome to Craving Foods
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, rem unde? Aliquam culpa porro
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+        </p>
+        <button class="btn">
+            Order Now
+        </button>
+
+    </section>
+
+    <!-- _________________________________________________________________ -->
+    <!-- creating another portion of the website using section tag -->
+    <section class="services-container" id="kiran">
+        <h1 class="nikith">
+            Our Services
+        </h1>
+        <div id="services">
+            <div class="box" id="box1">
+                <img src="img/hi.jpg" alt="">
+                <h2 class="h-secondary center">
+                    Food Ordering
+                </h2>
+                <p class="center">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem minus ducimus vel eaque
+                    nulla laudantium possimus. Obcaecati quibusdam, esse dignissimos animi rerum voluptas quae. Alias,
+                    earum ullam magnam officiis architecto atque quis dolorum.
+                </p>
+            </div>
+            <div class="box" id="box2">
+                <img src="img/fooddelivery.png" alt="">
+                <h2 class="h-secondary center">
+                    Food Catering
+                </h2>
+                <p class="center">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem minus ducimus vel eaque
+                    nulla laudantium possimus. Obcaecati quibusdam, esse dignissimos animi rerum voluptas quae. Alias,
+                    earum ullam magnam officiis architecto atque quis dolorum.
+                </p>
+            </div>
+            <div class="box" id="box3">
+                <img src="img/bulk.png" alt="">
+                <h2 class="h-secondary center">
+                    Bulk Ordering
+                </h2>
+                <p class="center">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem minus ducimus vel eaque
+                    nulla laudantium possimus. Obcaecati quibusdam, esse dignissimos animi rerum voluptas quae. Alias,
+                    earum ullam magnam officiis architecto atque quis dolorum.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ___________________________________________________________________________ -->
+    <!-- creating another portion of the website -->
+    <section id="client-section">
+        <h1 class="ourclients">
+            Our Clients
+        </h1>
+
+        <div id="clients">
+            <div class="clientitem">
+                <img src="img/download.jpg" alt="Our Clients">
+            </div>
+            <div class="clientitem">
+                <img src="img/logo2.png" alt="Our Clients">
+            </div>
+            <div class="clientitem">
+                <img src="img/logo3.png" alt="Our Clients">
+            </div>
+            <div class="clientitem">
+                <img src="img/logo4.png" alt="Our Clients">
+            </div>
+            <div class="clientitem">
+                <img src="img/logo5.png" alt="Our Clients">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- creating another portion of the website using section tag -->
+    <!-- creating a form to be filled up -->
+    <section id="contact">
+        <h1 id="hello">
+            Contact Us
+        </h1>
+        <div id="contactbox">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Mail: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your mail">
+                </div>
+                <div class="form-group">
+                    <label for="name">Phno: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your number">
+                </div>
+                <div class="form-group">
+                    <label for="name" id="msg">Meassage: </label>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                    <!-- 'textarea' tag is used to write some text in the form -->
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- End portion of the webpage is designed using footer tag -->
+    <footer>
+        <div class="foot">
+            Copyright&copy; www.Cravings.com All rights reserved!
+        </div>
+    </footer>
+</body>
+
+
+</html>

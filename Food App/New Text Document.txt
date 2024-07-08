@@ -1,0 +1,4 @@
+1)to make the text to the centre use "text align:centre"
+2)to apply the the background image for the two portions of the page use should use "before" pseudo selectors
+-so in this code we applied the one individual background image to navbar and section of class 'home' 
+3)Learn how to make forms that are meant to be filled
